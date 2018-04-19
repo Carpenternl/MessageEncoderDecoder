@@ -62,6 +62,7 @@
             this.encodeFileToolStripMenuItem.Name = "encodeFileToolStripMenuItem";
             this.encodeFileToolStripMenuItem.Size = new System.Drawing.Size(108, 27);
             this.encodeFileToolStripMenuItem.Text = "Encode File";
+            this.encodeFileToolStripMenuItem.Click += new System.EventHandler(this.encodeFileToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -75,7 +76,15 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.DefaultExt = "txt";
+            this.openFileDialog1.Filter = "Text files (*.txt)|*.txt";
+            this.openFileDialog1.Title = "Select a text file";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "txt files (*.txt)| *.txt";
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // Form1
             // 
